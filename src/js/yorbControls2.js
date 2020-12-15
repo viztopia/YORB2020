@@ -22,7 +22,7 @@ export class YorbControls2 {
         // variables for drag controls
         this.onPointerDownPointerX = 0
         this.onPointerDownPointerY = 0
-        this.lon = 0
+        this.lon = 180  //add an 180 degree offset so that the camera is looking at the front when a user first tries to move camera via mouse
         this.lat = 0
         this.phi = 0
         this.theta = 0
@@ -363,6 +363,7 @@ export class YorbControls2 {
         this.onPointerDownLon = this.lon
         this.onPointerDownLat = this.lat
         this.isUserInteracting = true
+        console.log(this.camera.target)
     }
 
     onDocumentMouseMove(event) {
@@ -370,6 +371,7 @@ export class YorbControls2 {
             this.lon = (this.onPointerDownPointerX - event.clientX) * -0.3 + this.onPointerDownLon
             this.lat = (event.clientY - this.onPointerDownPointerY) * -0.3 + this.onPointerDownLat
             this.computeCameraOrientation()
+            console.log(this.camera.target)
         }
     }
 
