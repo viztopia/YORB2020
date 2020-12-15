@@ -3,9 +3,9 @@ import * as THREE from 'three'
 import { createSimpleText } from './utils'
 import { hackToRemovePlayerTemporarily } from './index.js'
 
-const project_thumbnails = require('../assets/images/project_thumbnails/*.png')
+const project_thumbnails = require('../assets/images/project_thumbnails/winterShow2020/*.png')
 
-export class SpringShow {
+export class SpringShow2020 {
     constructor(scene, camera, controls, mouse) {
         this.scene = scene
         this.camera = camera
